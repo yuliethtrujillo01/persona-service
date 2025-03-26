@@ -3,6 +3,9 @@ package co.empresa.productoservice.controllers;
 import co.empresa.productoservice.model.entities.Producto;
 import co.empresa.productoservice.model.services.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,6 +27,13 @@ public class ProductoRestController {
     @GetMapping("/productos")
     public List<Producto> getProductos(){
         return productoService.findAll();
+    }
+
+    // Metodo que retorna todos los productos paginados
+    @GetMapping("/producto/page/{page}")
+    public Page<Producto> index(@PathVariable Integer page) {
+        Pageable pageable = PageRequest.of(page, 4);
+        return productoService.findAll(pageable);
     }
 
     // Metodo que guarda un producto pasandolo por el cuerpo de la petición

@@ -1,11 +1,11 @@
 package co.empresa.productoservice.model.repositories;
 
 import co.empresa.productoservice.model.entities.Producto;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Interface que hereda de CrudRepository para realizar las
- * operaciones de CRUD sobre la entidad Producto
+ * Interface que hereda de JpaRepository para realizar las
+ * operaciones de CRUD paginacion y ordenamiento sobre la entidad Producto
  */
-public interface IProductoRepository extends CrudRepository<Producto, Long> {
+public interface IProductoRepository extends JpaRepository<Producto, Long> {
 }
