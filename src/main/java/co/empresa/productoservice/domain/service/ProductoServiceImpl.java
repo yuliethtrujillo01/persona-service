@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Clase que implementa los métodos de la interfaz IProductoService
@@ -36,8 +37,8 @@ public class ProductoServiceImpl implements IProductoService {
 
     @Override
     @Transactional(readOnly = true)
-    public Producto findById(Long id) {
-        return productoRepository.findById(id).orElse(null);
+    public Optional<Producto> findById(Long id) {
+        return productoRepository.findById(id);
     }
 
     @Override
@@ -49,7 +50,7 @@ public class ProductoServiceImpl implements IProductoService {
     @Override
     @Transactional(readOnly = true)
     public List<Producto> findAll() {
-        return (List<Producto>) productoRepository.findAll();
+        return productoRepository.findAll();
     }
 
     @Override
