@@ -1,7 +1,7 @@
-package co.empresa.productoservice.controllers;
+package co.empresa.productoservice.delivery.rest;
 
-import co.empresa.productoservice.model.entities.Producto;
-import co.empresa.productoservice.model.services.IProductoService;
+import co.empresa.productoservice.domain.model.Producto;
+import co.empresa.productoservice.domain.service.IProductoService;
 import jakarta.validation.Valid;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;

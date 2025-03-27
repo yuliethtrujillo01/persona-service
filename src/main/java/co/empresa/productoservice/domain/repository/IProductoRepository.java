@@ -1,6 +1,6 @@
-package co.empresa.productoservice.model.repositories;
+package co.empresa.productoservice.domain.repository;
 
-import co.empresa.productoservice.model.entities.Producto;
+import co.empresa.productoservice.domain.model.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
