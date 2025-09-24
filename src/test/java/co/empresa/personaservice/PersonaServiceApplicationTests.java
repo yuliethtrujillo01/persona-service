@@ -1,10 +1,10 @@
-package co.empresa.productoservice;
+package co.empresa.personaservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductoServiceApplicationTests {
+class PersonaServiceApplicationTests {
 
     @Test
     void contextLoads() {
